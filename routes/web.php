@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InventarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('auth.login');
-});
-Route::resource('unidades','App\Http\Controllers\UnidadController');
 
-Route::resource('usuarios','App\Http\Controllers\UserController');
+});
+
+Route::group(array('before' => 'auth'), function() {
+    Route::resource('unidades','App\Http\Controllers\UnidadController');
+    Route::resource('usuarios','App\Http\Controllers\UserController');
+    Route::resource('articulos','App\Http\Controllers\ArticuloController');
+    Route::resource('pusers','App\Http\Controllers\PuserController');
+    Route::resource('inventarios', 'App\Http\Controllers\InventarioController');
+    Route::post('/prestamos/edit','App\Http\Controllers\PrestamoController@update');
+    Route::resource('prestamos','App\Http\Controllers\PrestamoController');
+    Route::resource('detalleprestamo','App\Http\Controllers\DetalleprestamoController');
+});
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     return view('dash.index');

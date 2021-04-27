@@ -1,27 +1,27 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Delete Account') }}
+        {{ __('Borrar Cuenta') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        {{ __('Permanentemente borrar esta cuenta.') }}
     </x-slot>
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+            {{ __('Una ves que esta cuenta haya sido eliminara, toda su informacion de acceso sera perdida. Recuerde que para crear una nueva cuenta, debe de contactarse con el Adminitrador.') }}
         </div>
 
         <div class="mt-5">
             <x-jet-danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
-                {{ __('Delete Account') }}
+                {{ __('Borrar Cuenta') }}
             </x-jet-danger-button>
         </div>
 
         <!-- Delete User Confirmation Modal -->
         <x-jet-dialog-modal wire:model="confirmingUserDeletion">
             <x-slot name="title">
-                {{ __('Delete Account') }}
+                {{ __('Borrar Cuenta') }}
             </x-slot>
 
             <x-slot name="content">

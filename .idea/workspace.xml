@@ -1,7 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="491a0b2c-25a9-49c1-8fe0-595232e2fd5d" name="Default Changelist" comment="" />
+    <list default="true" id="491a0b2c-25a9-49c1-8fe0-595232e2fd5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticuloController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleprestamoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/InventarioController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PrestamoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PuserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/CustomPasswordNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/snappy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618325405.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618325505.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618325583.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618325718.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618326071.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1618327362.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/articulos/1619101898.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/cclogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/articulo/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/articulo/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/articulo/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/detalleprestamo/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/prestamo/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/puser/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/puser/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/puser/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/auth-page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xl.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/common/brand-logo-xs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/footer/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/dropdown-item-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/dropdown-item-submenu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/dropdown-item.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-dropdown-menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-dropdown-user-menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-left-sidebar-toggler.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-logout-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-right-sidebar-toggler.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item-search-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/menu-item.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/navbar-layout-topnav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/navbar/navbar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/left-sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/menu-item-header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/menu-item-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/menu-item-search-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/menu-item-treeview-menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/menu-item.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/partials/sidebar/right-sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/plugins.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/action-message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/action-section.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-logo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-mark.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/authentication-card-logo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/authentication-card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/banner.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/checkbox.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/confirmation-modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/confirms-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/danger-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/dialog-modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/dropdown-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/dropdown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/form-section.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/input-error.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/input.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/label.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/nav-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/responsive-nav-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/secondary-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/section-border.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/section-title.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/switchable-team.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/validation-errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/mail/team-invitation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/panel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/subcopy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/panel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/subcopy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/asicc_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/asicc_v1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Articulo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Articulo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Detalleprestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Detalleprestamo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Inventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Prestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Prestamo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Unidad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Unidad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_23_144420_create_pusers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_23_144420_create_pusers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dash/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dash/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/delete-user-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/delete-user-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/logout-other-browser-sessions-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/logout-other-browser-sessions-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/two-factor-authentication-form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/unidad/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/unidad/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/unidad/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuario/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuario/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuario/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +160,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -140,14 +293,28 @@
       <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
       <path value="$PROJECT_DIR$/vendor/jeroennoten/laravel-adminlte" />
       <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/h4cc/wkhtmltopdf-amd64" />
+      <path value="$PROJECT_DIR$/vendor/h4cc/wkhtmltoimage-amd64" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-snappy" />
+      <path value="$PROJECT_DIR$/vendor/laraveles/spanish" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ptGrC2VSQ1Xbjnukqtt3iICHrT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -173,11 +340,33 @@
       <workItem from="1616418182963" duration="8708000" />
       <workItem from="1616437123843" duration="10331000" />
       <workItem from="1616508519589" duration="29562000" />
-      <workItem from="1616680984362" duration="4621000" />
+      <workItem from="1616680984362" duration="20111000" />
+      <workItem from="1617025736141" duration="9273000" />
+      <workItem from="1617198051597" duration="22460000" />
+      <workItem from="1617713131704" duration="4406000" />
+      <workItem from="1617811825789" duration="1430000" />
+      <workItem from="1618173812865" duration="1359000" />
+      <workItem from="1618181561074" duration="60157000" />
+      <workItem from="1619077116140" duration="8750000" />
+      <workItem from="1619510384676" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/profile/show.blade.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

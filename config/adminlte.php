@@ -16,7 +16,7 @@ return [
 
     'title' => 'SICC',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| SICC',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => 'true',
     'use_full_favicon' => false,
 
     /*
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>SICC',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>SICC</b>',
+    'logo_img' => 'img/cclogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'cclogo',
 
     /*
     |--------------------------------------------------------------------------
@@ -101,12 +101,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'bg-gradient-dark',
+    'classes_auth_card' => 'card-outline card-primary',
     'classes_auth_header' => '',
-    'classes_auth_body' => 'bg-gradient-dark',
-    'classes_auth_footer' => 'tex-center',
-    'classes_auth_icon' => 'text-light',
-    'classes_auth_btn' => 'btn-flat bnt-light',
+    'classes_auth_body' => '',
+    'classes_auth_footer' => '',
+    'classes_auth_icon' => '',
+    'classes_auth_btn' => 'btn-flat btn-primary',
 
     /*
     |--------------------------------------------------------------------------
@@ -190,8 +190,8 @@ return [
     'dashboard_url' => 'dash',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
+    'register_url' => false,
+    'password_reset_url' => 'forgot-password',
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
@@ -230,25 +230,17 @@ return [
             'topnav' => true,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        ['header' => 'Administracion de Perfil'],
-        [
             'text' => 'Perfil',
-            'url'  => 'admin/settings',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'Cambiar contraseña',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+        ['header' => 'Administracion Usuarios',
+         'can'    => 'view-menu'
         ],
-        ['header' => 'Administracion Usuarios'],
         [
             'text'    => 'Unidades',
             'icon'    => 'fas fa-id-card-alt',
+            'can'     => 'view-menu',
             'submenu' => [
                 [
                     'text' => 'Listar Unidades',
@@ -265,6 +257,7 @@ return [
         [
           'text' => 'Usuarios',
           'icon' =>'fas fa-user-cog',
+          'can'  =>'view-menu',
           'submenu'=>[
               [
                 'text'=>'Listar Usuarios',
@@ -286,12 +279,12 @@ return [
                 [
                     'text'=>'Listar Inventarios',
                     'icon'=>'fas fa-clipboard-list',
-                    'url'=>'url',
+                    'url'=>'/inventarios',
                 ],
                 [
                     'text'=>'Crear nuevo Inventario',
                     'icon'=>'fas fa-clipboard-check',
-                    'url'=>'#',
+                    'url'=>'/inventarios/create',
                 ],
             ],
         ],
@@ -302,26 +295,25 @@ return [
               [
                   'text'=>'Listar Items',
                   'icon'=>'fas fa-box',
-                  'url'=>'#',
+                  'url'=>'/articulos',
               ],
               [
                   'text'=>'Ingresar nuevo Item',
                   'icon'=>'fas fa-box-open',
-                  'url'=>'#',
+                  'url'=>'/articulos/create',
               ]
             ],
         ],
         ['header'=>'Administracion de Prestamos'],
         [
-            'text'=>'Listar Prestamos activos',
-            'icon'=>'fas fa-file-invoice',
-            'url'=>'#',
+            'text'=>'Listar Usuarios de Prestamo',
+            'icon'=>'fas fa-user-tag',
+            'url'=>'/pusers',
         ],
         [
-            'text'=>'Nuevo Prestamo',
-            'icon'=>'fas fa-file-signature',
-            'url'=>'#',
-
+            'text'=>'Listar Prestamos activos',
+            'icon'=>'fas fa-file-invoice',
+            'url'=>'/prestamos',
         ],
     ],
 

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detalleprestamo extends Model
 {
-    use HasFactory;
+    protected $fillable =['articulo_id','prestamo_id','cantidad','comentario'];
 }

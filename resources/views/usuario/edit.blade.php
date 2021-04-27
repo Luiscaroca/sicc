@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Editar Usuario')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Editar Usuario</h1>
 @stop
 
 @section('content')
@@ -17,7 +17,7 @@
         <div clas="form-group">
             <label class="form-label">Unidad</label>
             <select class ='form-control' name="unidad_id">
-                <option value="">Seleccione Unidad</option>
+                <option value=""disabled selected>Seleccione Unidad</option>
                 @foreach($unidades as $unidad)
                     <option value="{{$unidad->id}}"{{$unidad->id == $usuario->unidad_id ? 'selected' : ''}}>{{$unidad->nombre}}</option>
                 @endforeach
@@ -30,9 +30,9 @@
         <div>
             <label for="" class="form-label">Rol</label>
             <select name="rol" id="rol" class="form-control">
-                <option value="">Seleccione Rol</option>
-                <option value="ROLE_ADMIN">Administrador</option>
-                <option value="ROLE_USER">Usuario Normal</option>
+                <option value="" disabled selected>Seleccione Rol</option>
+                <option value="ROLE_ADMIN"{{$usuario->rol == "ROLE_ADMIN" ? 'selected' : ''}}>Administrador</option>
+                <option value="ROLE_USER"{{$usuario->rol == "ROLE_USER" ? 'selected' : ''}}>Usuario Normal</option>
             </select>
         </div>
 
@@ -46,5 +46,4 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
 @stop

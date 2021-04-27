@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Nuevo Usuario')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Nuevo Usuario</h1>
 @stop
 
 @section('content')
@@ -20,6 +20,7 @@
         <div clas="form-group">
             <label for="" class="form-label">Unidad</label>
             <select name="unidad_id" id="unidad_id" class="form-control">
+                <option value="" disabled selected>Seleccione una Unidad</option>
                 @foreach($unidades as $unidad)
                     <option value="{{$unidad->id}}">{{$unidad->nombre}}</option>
                 @endforeach
@@ -32,6 +33,7 @@
         <div>
             <label for="" class="form-label">Rol</label>
             <select name="rol" id="rol" class="form-control">
+                <option value="" disabled selected>Seleccione un Rol</option>
                 <option value="ROLE_ADMIN">Administrador</option>
                 <option value="ROLE_USER">Usuario Normal</option>
             </select>
@@ -44,8 +46,11 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 @stop
