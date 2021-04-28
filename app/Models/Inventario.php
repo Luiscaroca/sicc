@@ -12,4 +12,9 @@ class Inventario extends Model
     public function unidade(){
         return $this->belongsTo('App\Models\Unidad');
     }
+
+    //relacion 1 Inventario a Muchos Articulos
+    public function inven_art(){
+        return $this->hasMany(Articulo::class);
+    }
 }

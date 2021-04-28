@@ -1,38 +1,34 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Listado de articulos de prestamo')
 
 @section('content_header')
-    <h1>Listado de Inventarios</h1>
+    <h1>Listado de Articulos en prestamo</h1>
 @stop
 
 @section('content')
-    <a href="inventarios/create" class="btn btn-primary">Crear</a>
 
-    <table id="inventarios" class="table table-striped table-bordered shadow-lg mt-4" style="width: 100%">
+
+    <table id="unidades" class="table table-striped table-bordered shadow-lg mt-4" style="width: 100%">
         <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Unidad</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Articulo</th>
+            <th scope="col">ID Prestamo</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Comentario</th>
+            <th scope="col">Fecha de Prestamo</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($inventarios as $inventario )
+        @foreach($detpres as $detpre)
             <tr>
-                <td>{{$inventario->id}}</td>
-                <td>{{$inventario->nombre}}</td>
-                <td>{{$inventario->uni_id}}</td>
-                <td>
-                    <form action="{{ route ('inventarios.destroy',$inventario->id) }}" method="POST">
-                        <a href="/inventarios/{{$inventario->id}}/edit" class="btn btn-info">Editar</a>
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Borrar</button>
-                    </form>
-
-                </td>
+                <td>{{$detpre->id}}</td>
+                <td>{{$detpre->articulo->nombre}}</td>
+                <td>{{$detpre->prestamo_id}}</td>
+                <td>{{$detpre->cantidad}}</td>
+                <td>{{$detpre->comentario}}</td>
+                <td>{{$detpre->created_at}}</td>
             </tr>
         @endforeach
         </tbody>
@@ -40,6 +36,8 @@
 @stop
 
 @section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
 @stop
@@ -50,7 +48,7 @@
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#inventarios').DataTable({
+            $('#unidades').DataTable({
                 language:{
                     "processing": "Procesando...",
                     "lengthMenu": "Mostrar _MENU_ registros",

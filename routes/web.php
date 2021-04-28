@@ -27,7 +27,7 @@ Route::group(array('before' => 'auth'), function() {
     Route::resource('inventarios', 'App\Http\Controllers\InventarioController');
     Route::post('/prestamos/edit','App\Http\Controllers\PrestamoController@update');
     Route::resource('prestamos','App\Http\Controllers\PrestamoController');
-    Route::resource('detalleprestamo','App\Http\Controllers\DetalleprestamoController');
+    Route::resource('detalleprestamos','App\Http\Controllers\DetalleprestamoController');
 });
 
 

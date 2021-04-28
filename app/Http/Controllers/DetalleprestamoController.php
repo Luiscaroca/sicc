@@ -17,7 +17,8 @@ class DetalleprestamoController extends Controller
      */
     public function index()
     {
-        //
+        $detpres = Detalleprestamo::with('articulo')->get();
+        return view('detalleprestamo.index')->with('detpres',$detpres);
     }
 
     /**
@@ -48,7 +49,7 @@ class DetalleprestamoController extends Controller
 
         $prestamos->save();
 
-        return redirect('/usuarios');
+        return redirect('/detalleprestamo');
     }
 
     /**

@@ -13,4 +13,10 @@ class Articulo extends Model
     public function detalle(){
         return $this->belongsTo('App\Models\Detalleprestamo');
     }
+
+    public function art_inven()    {
+        return $this->belongsTo(Inventario::class);
+    }
+
+    //1 detalle muchos articulos
 }

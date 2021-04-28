@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Inventario;
 use Illuminate\Http\Request;
 use App\Models\Articulo;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 
 class ArticuloController extends Controller
@@ -20,8 +21,13 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        $articulos = Articulo::all();
-        return view('articulo.index')->with('articulos',$articulos);
+        if(Auth::User()->Unidad == 'Admin'){
+            $articulos = Articulo::all();
+            return view('articulo.index')->with('articulos',$articulos);
+        }else{
+            $articulos = Articulo::all();
+            return view('articulo.index')->with('articulos',$articulos);
+        }
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Inventario;
 use App\Models\Unidad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InventarioController extends Controller
 {
@@ -19,8 +20,14 @@ class InventarioController extends Controller
     public function index()
     {
 
-        $inventarios = Inventario::with('unidade')->get();
-        return view('inventario.index')->with('inventarios',$inventarios);
+        if(Auth::User()->Unidad == 'Admin'){
+            $inventarios = Inventario::with('unidade')->get();
+            return view('inventario.index')->with('inventarios',$inventarios);
+        }else{
+            $inventarios = Inventario::where('uni_id',Auth::user()->unidad_id)->get();
+            return view('inventario.index')->with('inventarios',$inventarios);
+        }
+
     }
 
     /**

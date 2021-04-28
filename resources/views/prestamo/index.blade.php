@@ -23,6 +23,7 @@
         <table class="table col-12">
             <thead>
                 <tr>
+                    <th>ID Prestamo</th>
                     <th>Usuario</th>
                     <th>Comentario</th>
                     <th>&nbsp</th>
@@ -31,6 +32,7 @@
             <tbody>
                 @foreach($prestamos as $prestamo)
                     <tr>
+                        <td>{{$prestamo->id}}</td>
                         <td>{{$prestamo->nombre}}{{ $prestamo->puser->nombre }}</td>
                         <td>{{$prestamo->comentario}}</td>
                         <td>
@@ -41,7 +43,9 @@
                                     data-comentario="{{$prestamo->comentario}}"
                                     data-toggle="modal" data-target="#editarModal">
                                 <i class="fa fa-edit"></i> </button>
-                            <a class="btn btn-round" href="detalleprestamo/create"><i class="far fa-plus-square"></i></a>
+                            <a class="btn btn-round" href="detalleprestamos/create"><i class="far fa-plus-square"></i></a>
+
+                            <a class="btn btn-round" href="detalleprestamos"><i class="fas fa-clipboard-list"></i></a>
                             <form action="{{url('prestamos',['id'=>$prestamo->id])}}" method="post" id="formEli_{{$prestamo->id}}">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$prestamo->id}}">
