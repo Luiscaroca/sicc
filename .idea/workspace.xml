@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="491a0b2c-25a9-49c1-8fe0-595232e2fd5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/detalleprestamo/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticuloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticuloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DetalleprestamoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleprestamoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InventarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InventarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Articulo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Articulo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Detalleprestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Detalleprestamo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Inventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inventario/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/prestamo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prestamo/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="491a0b2c-25a9-49c1-8fe0-595232e2fd5d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +199,7 @@
       <workItem from="1618181561074" duration="60157000" />
       <workItem from="1619077116140" duration="8750000" />
       <workItem from="1619510384676" duration="18648000" />
-      <workItem from="1619619514544" duration="2797000" />
+      <workItem from="1619619514544" duration="2867000" />
     </task>
     <task id="LOCAL-00001" summary="Version semi-final">
       <created>1619512673407</created>
@@ -220,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619512673407</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version final">
+      <created>1619632399284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619632399284</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +224,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Version semi-final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version semi-final" />
+    <MESSAGE value="Version final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
