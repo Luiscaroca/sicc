@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Lista de Articulos')
+@section('title', 'Lista de Artículos')
 
 @section('content_header')
-    <h1>Lista de Articulos</h1>
+    <h1>Lista de Artículos</h1>
 @stop
 
 @section('content')
@@ -33,12 +33,24 @@
                 <td>{{$articulo->precio}}</td>
                 <td><img src="img/articulos/{{$articulo->file_path}}" width="100px" height="100px" alt="imagen"></td>
                 <td>
-                    <form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
+                    <center><form id="form1" action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
                         <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info">Editar</a>
+                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Préstamo</a>
+                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Devolución</a>
                         @csrf
+                    </form></center>
+                    <style>
+                        #form1{
+                            margin-top: 10px;
+                            margin-bottom: 4px;
+                        }
+                    </style>
+
+                    <center><form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
+                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Dar de Baja</a>
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Borrar</button>
-                    </form>
+                    </form></center>
 
                 </td>
             </tr>

@@ -9,7 +9,7 @@
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('De ser necesario, puede cerrar sesión de todos los demas sitios que aparescan en esta lista. Alguna de sus sesiones puede no verse reflejada en la lista, ya que esta lista no se actualiza en tiempo real. Si siente que su cuenta ha sido comprometida, es recomendable el cambiar contraseña a una nueva.') }}
+            {{ __('De ser necesario, puede cerrar sesión de todos los demás dispositivos que aparezcan en esta lista. Alguna de sus sesiones puede no verse reflejada en la lista, ya que esta lista no se actualiza en tiempo real. Si siente que su cuenta ha sido vulnerada, es recomendable el cambiar contraseña a una nueva.') }}
         </div>
 
         @if (count($this->sessions) > 0)
@@ -53,7 +53,7 @@
 
         <div class="flex items-center mt-5">
             <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
-                {{ __('Cerrar sesión en otros dispositivos.') }}
+                {{ __('Cerrar sesión en otros dispositivos') }}
             </x-jet-button>
 
             <x-jet-action-message class="ml-3" on="loggedOut">
@@ -64,11 +64,11 @@
         <!-- Log Out Other Devices Confirmation Modal -->
         <x-jet-dialog-modal wire:model="confirmingLogout">
             <x-slot name="title">
-                {{ __('Confirmar cerrar sesión de otros dispositivos.') }}
+                {{ __('Confirmar cerrar sesión de otros dispositivos') }}
             </x-slot>
 
             <x-slot name="content">
-                {{ __('Por favor, por motivos de seguridad, ingrese su clave nuevamente para confirmar que desea cerrar la sesión de todos los otros dispositivos.') }}
+                {{ __('Por favor, por motivos de seguridad, ingrese su clave nuevamente para confirmar esta acción.') }}
 
                 <div class="mt-4" x-data="{}" x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
                     <x-jet-input type="password" class="mt-1 block w-3/4"

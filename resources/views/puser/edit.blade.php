@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Edotar Usuario para Préstamo')
 
 @section('content_header')
-    <h1>Editar usuario de prestamo</h1>
+    <h1>Editar Usuario para Préstamo</h1>
 @stop
 
 @section('content')
@@ -19,7 +19,7 @@
             <input id="ecorreo" name="ecorreo" type="email" class="form-control" value="{{$puser->correo}}">
         </div>
         <div clas="mb-3">
-            <label for="" class="form-label">Telefono</label>
+            <label for="" class="form-label">Teléfono</label>
             <input id="etelefono" name="etelefono" type="text" class="form-control" value="{{$puser->telefono}}">
         </div>
 

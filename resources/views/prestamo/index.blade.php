@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Prestamos Activos')
+@section('title', 'Préstamos Activos')
 
 @section('content')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Prestamos Activos</h1>
+        <h1 class="h3 mb-0 text-gray-800">Préstamos Activos</h1>
         <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#crearModal">
             <i class="fas fa-user fa-sm text-white-50"></i>
-            Crear nuevo Prestamo
+            Crear Nuevo Préstamo
         </button>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
         <table class="table col-12">
             <thead>
                 <tr>
-                    <th>ID Prestamo</th>
+                    <th>ID Préstamo</th>
                     <th>Usuario</th>
                     <th>Comentario</th>
                     <th>&nbsp</th>
@@ -62,7 +62,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Crear Prestamo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Crear Préstamo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="Submit" class="btn btn-primary">Crear Prestamo</button>
+                        <button type="Submit" class="btn btn-primary">Crear Préstamo</button>
                     </div>
                 </form>
             </div>
@@ -110,13 +110,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Prestamo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Préstamo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h5>¿Realmente desea eliminar el Prestamo?</h5>
+                    <h5>¿Realmente desea eliminar el Préstamo?</h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -130,7 +130,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Prestamo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Préstamo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -168,7 +168,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="Submit" class="btn btn-primary">Editar Prestamo</button>
+                        <button type="Submit" class="btn btn-primary">Editar Préstamo</button>
                     </div>
                 </form>
             </div>

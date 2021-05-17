@@ -234,7 +234,7 @@ return [
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        ['header' => 'Administracion Usuarios',
+        ['header' => 'Administración Usuarios',
          'can'    => 'view-menu'
         ],
         [
@@ -271,7 +271,7 @@ return [
               ]
           ],
         ],
-        ['header'=>'Administracion de Inventarios'],
+        ['header'=>'Administración de Inventarios'],
         [
             'text'=>'Inventarios',
             'icon'=>'fas fa-warehouse',
@@ -282,36 +282,36 @@ return [
                     'url'=>'/inventarios',
                 ],
                 [
-                    'text'=>'Crear nuevo Inventario',
+                    'text'=>'Crear Nuevo Inventario',
                     'icon'=>'fas fa-clipboard-check',
                     'url'=>'/inventarios/create',
                 ],
             ],
         ],
         [
-            'text'=>'Articulos',
+            'text'=>'Artículos',
             'icon'=>'fas fa-boxes',
             'submenu'=>[
               [
-                  'text'=>'Listar Items',
+                  'text'=>'Listar Artículos',
                   'icon'=>'fas fa-box',
                   'url'=>'/articulos',
               ],
               [
-                  'text'=>'Ingresar nuevo Item',
+                  'text'=>'Ingresar Nuevo Artículo',
                   'icon'=>'fas fa-box-open',
                   'url'=>'/articulos/create',
               ]
             ],
         ],
-        ['header'=>'Administracion de Prestamos'],
+        ['header'=>'Administración de Préstamos'],
         [
-            'text'=>'Listar Usuarios de Prestamo',
+            'text'=>'Listar Usuarios de Préstamo',
             'icon'=>'fas fa-user-tag',
             'url'=>'/pusers',
         ],
         [
-            'text'=>'Listar Prestamos activos',
+            'text'=>'Listar Préstamos Activos',
             'icon'=>'fas fa-file-invoice',
             'url'=>'/prestamos',
         ],

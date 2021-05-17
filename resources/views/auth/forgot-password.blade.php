@@ -1,3 +1,7 @@
+<head>
+    <title>Recuperar Contraseña | Sicc</title>
+</head>
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -5,7 +9,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('En caso de olvidar la contraseña, favor de ingresar su correo asociado. Se le enviara a su correo, un link a un formulario donde podra reiniciar su contraseña.') }}
+            {{ __('En caso de olvidar su contraseña, por favor de ingresar su correo asociado para poder hacer envió de un link a un formulario donde podrá reiniciar su contraseña.') }}
         </div>
 
         @if (session('status'))
@@ -26,7 +30,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-jet-button>
-                    {{ __('Enviar correo de restauración.') }}
+                    {{ __('Enviar correo de restauración') }}
                 </x-jet-button>
             </div>
         </form>

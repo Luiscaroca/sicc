@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Nuevo Usuario para Préstamo')
 
 @section('content_header')
-    <h1>Crear nuevo usuario de prestamo</h1>
+    <h1>Crear Nuevo Usuario para Préstamo</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
             <input id="pcorreo" name="pcorreo" type="email" class="form-control" tabindex="1">
         </div>
         <div clas="mb-3">
-            <label for="" class="form-label">Telefono</label>
+            <label for="" class="form-label">Teléfono</label>
             <input id="ptele" name="ptele" type="text" class="form-control" tabindex="1">
         </div>
 

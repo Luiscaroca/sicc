@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Listado de Usuarios para Préstamo')
 
 @section('content_header')
-    <h1>Directorio Usuarios de Prestamo</h1>
+    <h1>Listaro de Usuarios para Prestamo</h1>
 @stop
 
 @section('content')
@@ -15,7 +15,7 @@
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Correo</th>
-            <th scope="col">Telefono</th>
+            <th scope="col">Teléfono</th>
             <th scope="col">Acciones</th>
         </tr>
         </thead>

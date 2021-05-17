@@ -1,27 +1,27 @@
 @extends('adminlte::page')
 
-@section('title', 'Nuevo Prestamo')
+@section('title', 'Nuevo Préstamo')
 
 @section('content_header')
-    <h1>Nuevo Prestamo</h1>
+    <h1>Nuevo Préstamo</h1>
 @stop
 
 @section('content')
     <form action="/detalleprestamo" method="POST">
         @csrf
         <div clas="form-group">
-            <label for="" class="form-label">Articulo</label>
+            <label for="" class="form-label">Artículo</label>
             <select name="articulo" id="articulo" class="form-control">
-                <option value="" disabled selected>Seleccione un articulo</option>
+                <option value="" disabled selected>Seleccione un artículo</option>
                 @foreach($articulos as $articulo)
                     <option value="{{$articulo->id}}">{{$articulo->nombre}}</option>
                 @endforeach
             </select>
         </div>
         <div clas="form-group">
-            <label for="" class="form-label">Prestamo</label>
+            <label for="" class="form-label">Préstamo</label>
             <select name="prestamo_id" id="prestamo_id" class="form-control">
-                <option value="" disabled selected>Corrobore ID Prestamo</option>
+                <option value="" disabled selected>Corrobore ID Préstamo</option>
                 @foreach($prestamos as $prestamo)
                     <option value="{{$prestamo->id}}"></option>
                 @endforeach
@@ -33,7 +33,7 @@
         </div>
         <div class="col-form-label">
             <label for="" class="form-label">Comentario</label>
-            <input id="comentario" name="comentario" type="text" class="form-control" placeholder="Comentario articulo">
+            <input id="comentario" name="comentario" type="text" class="form-control" placeholder="Comentario artículo">
         </div>
 
 

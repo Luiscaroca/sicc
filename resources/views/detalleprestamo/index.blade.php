@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Listado de articulos de prestamo')
+@section('title', 'Listado de Artículos en Préstamo')
 
 @section('content_header')
-    <h1>Listado de Articulos en prestamo</h1>
+    <h1>Listado de Artículos en préstamo</h1>
 @stop
 
 @section('content')
@@ -13,11 +13,11 @@
         <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Articulo</th>
-            <th scope="col">ID Prestamo</th>
+            <th scope="col">Artículo</th>
+            <th scope="col">ID Préstamo</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Comentario</th>
-            <th scope="col">Fecha de Prestamo</th>
+            <th scope="col">Fecha de Préstamo</th>
         </tr>
         </thead>
         <tbody>

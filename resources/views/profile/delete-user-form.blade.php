@@ -4,12 +4,12 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanentemente borrar esta cuenta.') }}
+        {{ __('Permanentemente borrar esta cuenta') }}
     </x-slot>
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('Una ves que esta cuenta haya sido eliminara, toda su informacion de acceso sera perdida. Recuerde que para crear una nueva cuenta, debe de contactarse con el Adminitrador.') }}
+            {{ __('Una vez que esta cuenta haya sido eliminada, toda su información de acceso será perdida. Recuerde que para crear una nueva cuenta, deberá de contactarse con el Adminitrador.') }}
         </div>
 
         <div class="mt-5">

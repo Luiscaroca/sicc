@@ -20,7 +20,7 @@ class InventarioController extends Controller
     public function index()
     {
 
-        if(Auth::User()->Unidad == 'Admin'){
+        if(Auth::User()->rol == 'ROLE_ADMIN'){
             $inventarios = Inventario::with('unidade')->get();
             return view('inventario.index')->with('inventarios',$inventarios);
         }else{

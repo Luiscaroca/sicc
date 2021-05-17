@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Crear nuevo Articulo')
+@section('title', 'Nuevo Artículo')
 
 @section('content_header')
-    <h1>Crear nuevo Articulo</h1>
+    <h1>Crear Nuevo Artículo</h1>
 @stop
 
 
@@ -41,8 +41,8 @@
             <input id="aprecio" name="aprecio" type="text" class="form-control" tabindex="1">
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Imagen Referencial</label>
-            <input id="aimagen" name="aimagen" type="file" class="form-control" placeholder="imagen">
+            <label for="" class="form-label">Imagen Referencial (Máximo 2 MB)</label>
+            <input id="aimagen" name="aimagen" type="file" class="form-control" placeholder="imagen" accept="image/*">
         </div>
         <a href="/articulos" class="btn btn-secondary" tabindex="5">Cancelar</a>
         <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
@@ -54,5 +54,14 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        var uploadField = document.getElementById("aimagen");
+
+            uploadField.onchange = function() {
+            if(this.files[0].size > 2097152){
+                alert("El archivo es demasiado pesado!");
+                this.value = "";
+            };
+        }; 
+    </script>
 @stop
