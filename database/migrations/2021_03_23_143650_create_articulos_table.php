@@ -16,9 +16,13 @@ class CreateArticulosTable extends Migration
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('n_serie');
             $table->bigInteger('inventario_id')->unsigned();
             $table->integer('cantidad');
             $table->boolean('estado');
+            $table->boolean('tipo_documento');
+            $table->string('n_orden');
+            $table->string('n_documento');
             $table->string('precio');
             $table->string('file_path');
             $table->foreign('inventario_id')
