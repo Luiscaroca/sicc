@@ -19,8 +19,8 @@ class CreateArticulosTable extends Migration
             $table->string('n_serie');
             $table->bigInteger('inventario_id')->unsigned();
             $table->integer('cantidad');
-            $table->boolean('estado');
-            $table->boolean('tipo_documento');
+            $table->string('estado');
+            $table->string('tipo_documento');
             $table->string('n_documento');
             $table->string('n_orden');
             $table->string('proveedor');

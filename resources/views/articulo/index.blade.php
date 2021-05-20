@@ -27,7 +27,7 @@
             <tr>
                 <td>{{$articulo->id}}</td>
                 <td>{{$articulo->nombre}}</td>
-                <td>{{$articulo->inventario_id}}</td>
+                <td>{{$articulo->art_inven->nombre}}</td>
                 <td>{{$articulo->cantidad}}</td>
                 <td>{{$articulo->estado}}</td>
                 <td>{{$articulo->precio}}</td>

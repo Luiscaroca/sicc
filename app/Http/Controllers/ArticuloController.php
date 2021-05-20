@@ -50,47 +50,23 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(),[
-            'anombre'=>'required|min:3|max:50',
-            'aserie'=>'required|not_in:0',
-            'inventario_id'=>'required|not_in:0',
-            'acantidad'=>'required|min:1|max:50',
-            'aestado'=>'required|not_in:0',
-            'aorden'=>'required|not_in:0',
-            'atipodocumento'=>'required|not_in:0',
-            'adocumento'=>'required|not_in:0',
-            'aproveedor'=>'required',
-            'aprecio'=>'required|min:1|max:50',
-            'aimagen'=>'required'
-    ]);
-        if($validator->fails()){
-            return back()
-                ->withInput()
-                ->with('ErrorInsert','Favor de llenar todos los campos')
-                ->withErrors($validator);
-                alert("error if");
-        }else {
-            $imagen = $request->file('aimagen');
-            $nombreimg = time() . '.' . $imagen->getClientOriginalExtension();
-            $destinoimg = public_path('img/articulos');
-            $request->aimagen->move($destinoimg, $nombreimg);
-            $articulo = Articulo::create([
-                'nombre' => $request->anombre,
-                'n_serie' => $request->aserie,
-                'inventario_id' => $request->inventario_id,
-                'cantidad' => $request->acantidad,
-                'estado' => $request->aestado,
-                'n_orden' => $request->aorden,
-                'tipo_documento' => $request->atipodocumento,
-                'n_documento' => $request->adocumento,
-                'proveedor' => $request->aproveedor,
-                'precio' => $request->aprecio,
-                'file_path'=>$nombreimg,
+        $imagen = $request->file('aimagen');
+        $nombreimg = time() . '.' . $imagen->getClientOriginalExtension();
+        $destinoimg = public_path('img/articulos');
+        $request->aimagen->move($destinoimg, $nombreimg);
+        $articulo = Articulo::create([
+            'nombre' => $request->anombre,
+            'n_serie' => $request->aserie,
+            'inventario_id' => $request->inventario_id,
+            'cantidad' => $request->acantidad,
+            'estado' => $request->aestado,
+            'n_orden' => $request->aorden,
+            'tipo_documento' => $request->atipodocumento,
+            'n_documento' => $request->adocumento,
+            'proveedor' => $request->aproveedor,
+            'precio' => $request->aprecio,
+            'file_path'=>$nombreimg,
             ]);
-            alert("error else");
-            return redirect('/articulos');;
-        }
-        
         return redirect('/articulos');
     }
 

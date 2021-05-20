@@ -15,7 +15,7 @@ class Articulo extends Model
     }
 
     public function art_inven()    {
-        return $this->belongsTo(Inventario::class);
+        return $this->belongsTo('App\Models\Inventario', 'id');
     }
 
     //1 detalle muchos articulos

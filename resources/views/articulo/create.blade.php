@@ -36,8 +36,8 @@
             <label for="" class="form-label">Estado</label>
             <select name="aestado" id="aestado" class="form-control">
                 <option value="" disabled selected>Seleccione un Estado</option>
-                <option value="1">Activo</option>
-                <option value="0">No Activo</option>
+                <option value="Activo">Activo</option>
+                <option value="No Activo">No Activo</option>
             </select>
         </div>
         <div clas="mb-3">
@@ -48,8 +48,8 @@
             <label for="" class="form-label">Tipo de documento</label>
             <select onchange="displayDivDemo('Ocultar', this)" name="atipodocumento" id="atipodocumento" class="form-control">
                 <option value="" disabled selected>Seleccione un Tipo de documento</option>
-                <option value="0">Boleta</option>
-                <option value="1">Factura</option>
+                <option value="Boleta">Boleta</option>
+                <option value="Factura">Factura</option>
             </select>
             
         </div>
@@ -99,7 +99,7 @@
 
     <script>
         function displayDivDemo(id, elementValue) {
-            document.getElementById(id).style.display = elementValue.value == 1 ? 'block' : 'none';
+            document.getElementById(id).style.display = elementValue.value == 'Factura' ? 'block' : 'none';
         }
     </script>
 @stop

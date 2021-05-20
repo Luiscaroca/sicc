@@ -15,6 +15,10 @@
             <label for="" class="form-label">Nombre</label>
             <input id="anombre" name="anombre" type="text" class="form-control" value="{{$articulo->nombre}}">
         </div>
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de serie</label>
+            <input id="aserie" name="aserie" type="text" class="form-control" tabindex="1" value="{{$articulo->n_serie}}">
+        </div>
         <div clas="form-group">
             <label for="" class="form-label">Inventario</label>
             <select name="inventario_id" id="Inventario_id" class="form-control">
@@ -32,9 +36,37 @@
             <label for="" class="form-label">Estado</label>
             <select name="aestado" id="aestado" class="form-control">
                 <option value="" disabled selected>Seleccione un Estado</option>
-                <option value="1"{{$inventario->estado == 1 ? 'selected' : ''}}>Activo</option>
-                <option value="0"{{$inventario->estado == 0 ? 'selected' : ''}}>No Activo</option>
+                <option value="Activo"{{$inventario->estado == 0 ? 'selected' : ''}}>Activo</option>
+                <option value="No Activo"{{$inventario->estado == 1 ? 'selected' : ''}}>No Activo</option>
             </select>
+        </div>
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de orden de compra</label>
+            <input id="aorden" name="aorden" type="text" class="form-control" tabindex="1" value="{{$articulo->n_orden}}">
+        </div>
+        <div>
+            <label for="" class="form-label">Tipo de documento</label>
+            <select onchange="displayDivDemo('Ocultar', this)" name="atipodocumento" id="atipodocumento" class="form-control">
+                <option value="" disabled selected>Seleccione un Tipo de documento</option>
+                <option value="Boleta"{{$inventario->tipo_documento == 1 ? 'selected' : ''}}>Boleta</option>
+                <option value="Factura"{{$inventario->tipo_documento == 0 ? 'selected' : ''}}>Factura</option>
+            </select>
+            
+        </div>
+        
+        <style>
+            #Ocultar {
+                display: none;
+            }
+        </style>
+
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de documento</label>
+            <input id="adocumento" name="adocumento" type="text" class="form-control" tabindex="1" value="{{$articulo->n_documento}}">
+        </div>
+        <div id="Ocultar" clas="mb-3">
+            <label for="" class="form-label">Nombre de proveedor</label>
+            <input id="aproveedor" name="aproveedor" type="text" class="form-control" tabindex="1" value="{{$articulo->proveedor}}">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Precio</label>
@@ -54,7 +86,7 @@
 @stop
 
 @section('js')
-    <script>
+<script>
         var uploadField = document.getElementById("aimagen");
 
             uploadField.onchange = function() {
@@ -62,6 +94,12 @@
                 alert("El archivo es demasiado pesado!");
                 this.value = "";
             };
-        }; 
+        };
+    </script>
+
+    <script>
+        function displayDivDemo(id, elementValue) {
+            document.getElementById(id).style.display = elementValue.value == 'Factura' ? 'block' : 'none';
+        }
     </script>
 @stop
