@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Articulo extends Model
 {
-    protected $fillable =['nombre','inventario_id','cantidad','estado','precio','file_path'];
+    protected $fillable =['nombre','n_serie','inventario_id','cantidad','estado','tipo_documento','n_documento','n_orden','proveedor','precio','file_path'];
 
     //Relacion 1 Articulo 1 Detalle
     public function detalle(){

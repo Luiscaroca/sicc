@@ -15,6 +15,10 @@
             <label for="" class="form-label">Nombre</label>
             <input id="anombre" name="anombre" type="text" class="form-control" tabindex="1">
         </div>
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de serie</label>
+            <input id="aserie" name="aserie" type="text" class="form-control" tabindex="1">
+        </div>
         <div clas="form-group">
             <label for="" class="form-label">Inventario</label>
             <select name="inventario_id" id="Inventario_id" class="form-control">
@@ -35,6 +39,34 @@
                 <option value="1">Activo</option>
                 <option value="0">No Activo</option>
             </select>
+        </div>
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de orden de compra</label>
+            <input id="aorden" name="aorden" type="text" class="form-control" tabindex="1">
+        </div>
+        <div>
+            <label for="" class="form-label">Tipo de documento</label>
+            <select onchange="displayDivDemo('Ocultar', this)" name="atipodocumento" id="atipodocumento" class="form-control">
+                <option value="" disabled selected>Seleccione un Tipo de documento</option>
+                <option value="0">Boleta</option>
+                <option value="1">Factura</option>
+            </select>
+            
+        </div>
+        
+        <style>
+            #Ocultar {
+                display: none;
+            }
+        </style>
+
+        <div clas="mb-3">
+            <label for="" class="form-label">Número de documento</label>
+            <input id="adocumento" name="adocumento" type="text" class="form-control" tabindex="1">
+        </div>
+        <div id="Ocultar" clas="mb-3">
+            <label for="" class="form-label">Nombre de proveedor</label>
+            <input id="aproveedor" name="aproveedor" type="text" class="form-control" tabindex="1">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Precio</label>
@@ -62,6 +94,12 @@
                 alert("El archivo es demasiado pesado!");
                 this.value = "";
             };
-        }; 
+        };
+    </script>
+
+    <script>
+        function displayDivDemo(id, elementValue) {
+            document.getElementById(id).style.display = elementValue.value == 1 ? 'block' : 'none';
+        }
     </script>
 @stop

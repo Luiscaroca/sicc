@@ -21,8 +21,9 @@ class CreateArticulosTable extends Migration
             $table->integer('cantidad');
             $table->boolean('estado');
             $table->boolean('tipo_documento');
-            $table->string('n_orden');
             $table->string('n_documento');
+            $table->string('n_orden');
+            $table->string('proveedor');
             $table->string('precio');
             $table->string('file_path');
             $table->foreign('inventario_id')
