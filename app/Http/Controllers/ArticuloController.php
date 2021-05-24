@@ -104,34 +104,23 @@ class ArticuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $articulo = Articulo::find($request->id);
-        $validator = Validator::make($request->all(),[
-            'anombre' =>'required|min:3|max:50',
-            'inventario_id'=>'required|not_in:0',
-            'acantidad'=>'required|min:1|max:50',
-            'aestado'=>'required|not_in:0',
-            'aprecio'=>'required|min:1|max:50',
-            'aimagen'=>'required|image|mimes:jpg,jpeg,png,gif,svg|max:2048'
-        ]);
-        if($validator->fails()){
-            return back()
-                ->withInput()
-                ->with('ErrorInsert','Favor de llenar todos los campos')
-                ->withErrors($validator);
-        }else {
-            $imagen = $request->file('aimagen');
-            $nombreimg = time() . '.' . $imagen->getClientOriginalExtension();
-            $destinoimg = public_path('img/articulos');
-            $request->aimagen->move($destinoimg, $nombreimg);
-            $articulo->nombre = $request->anombre;
-            $articulo->inventario_id = $request->inventario_id;
-            $articulo->cantidad = $request->acantidad;
-            $articulo->estado = $request->aestado;
-            $articulo->precio = $request->aprecio;
-            $articulo->file_path = $nombreimg;
-            $articulo->save();
-            return redirect('/articulos');;
-        }
+        $imagen = $request->file('aimagen');
+        $nombreimg = time() . '.' . $imagen->getClientOriginalExtension();
+        $destinoimg = public_path('img/articulos');
+        $request->aimagen->move($destinoimg, $nombreimg);
+        $articulo->nombre = $request->anombre;
+        $articulo->n_serie = $request->aserie;
+        $articulo->inventario_id = $request->inventario_id;
+        $articulo->cantidad = $request->acantidad;
+        $articulo->estado = $request->aestado;
+        $articulo->n_orden = $request->aorden;
+        $articulo->tipo_documento = $request->atipodocumento;
+        $articulo->n_documento = $request->adocumento;
+        $articulo->precio = $request->aprecio;
+        $articulo->precio = $request->aprecio;
+        $articulo->file_path = $nombreimg;
+        $articulo->update();
+        return redirect('/articulos');;
     }
 
     /**

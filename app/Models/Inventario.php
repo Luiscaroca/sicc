@@ -15,6 +15,6 @@ class Inventario extends Model
 
     //relacion 1 Inventario a Muchos Articulos
     public function inven_art(){
-        return $this->hasMany(Articulo::class);
+        return $this->hasMany('App\Models\Articulo', 'inventario_id');
     }
 }

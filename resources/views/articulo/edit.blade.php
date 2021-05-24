@@ -51,15 +51,7 @@
                 <option value="Boleta"{{$inventario->tipo_documento == 1 ? 'selected' : ''}}>Boleta</option>
                 <option value="Factura"{{$inventario->tipo_documento == 0 ? 'selected' : ''}}>Factura</option>
             </select>
-            
         </div>
-        
-        <style>
-            #Ocultar {
-                display: none;
-            }
-        </style>
-
         <div clas="mb-3">
             <label for="" class="form-label">Número de documento</label>
             <input id="adocumento" name="adocumento" type="text" class="form-control" tabindex="1" value="{{$articulo->n_documento}}">
