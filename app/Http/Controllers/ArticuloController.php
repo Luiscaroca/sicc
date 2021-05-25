@@ -21,7 +21,7 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        if(Auth::User()->Unidad == 'Admin'){
+        if(Auth::User()->rol == 'ROLE_ADMIN'){
             $articulos = Articulo::all();
             return view('articulo.index')->with('articulos',$articulos);
         }else{
@@ -104,6 +104,7 @@ class ArticuloController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $articulo = Articulo::find($id);
         $imagen = $request->file('aimagen');
         $nombreimg = time() . '.' . $imagen->getClientOriginalExtension();
         $destinoimg = public_path('img/articulos');
@@ -119,7 +120,7 @@ class ArticuloController extends Controller
         $articulo->precio = $request->aprecio;
         $articulo->precio = $request->aprecio;
         $articulo->file_path = $nombreimg;
-        $articulo->update();
+        $articulo->save();
         return redirect('/articulos');;
     }
 

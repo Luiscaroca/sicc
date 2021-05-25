@@ -9,7 +9,8 @@
 
 
 @section('content')
-    <form action="/articulos" method="POST" enctype="multipart/form-data">
+    <form action="/articulos/{{$articulo->id}}" method="POST" enctype="multipart/form-data">
+        @method('PUT')
         @csrf
         <div clas="mb-3">
             <label for="" class="form-label">Nombre</label>

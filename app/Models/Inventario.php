@@ -10,11 +10,11 @@ class Inventario extends Model
     use HasFactory;
     //relacion 1 Inventario a 1 Unidad
     public function unidade(){
-        return $this->belongsTo('App\Models\Unidad');
+        return $this->belongsTo('App\Models\Unidad', 'uni_id');
     }
 
     //relacion 1 Inventario a Muchos Articulos
     public function inven_art(){
-        return $this->hasMany('App\Models\Articulo', 'inventario_id');
+        return $this->hasMany(Articulo::class);
     }
 }

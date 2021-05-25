@@ -23,7 +23,7 @@
             <tr>
                 <td>{{$inventario->id}}</td>
                 <td>{{$inventario->nombre}}</td>
-                <td>{{$inventario->uni_id}}</td>
+                <td>{{$inventario->unidade->nombre}}</td>
                 <td>
                     <form action="{{ route ('inventarios.destroy',$inventario->id) }}" method="POST">
                         <a href="/inventarios/{{$inventario->id}}/edit" class="btn btn-info">Editar</a>
