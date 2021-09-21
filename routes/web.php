@@ -28,6 +28,7 @@ Route::group(array('before' => 'auth'), function() {
     Route::post('/prestamos/edit','App\Http\Controllers\PrestamoController@update');
     Route::resource('prestamos','App\Http\Controllers\PrestamoController');
     Route::resource('detalleprestamos','App\Http\Controllers\DetalleprestamoController');
+    Route::resource('estado','App\Http\Controllers\EstadoController');
 });
 
 

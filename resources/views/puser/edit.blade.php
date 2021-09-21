@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Edotar Usuario para Préstamo')
+@section('title', 'Editar Usuario para Préstamo')
 
 @section('content_header')
     <h1>Editar Usuario para Préstamo</h1>

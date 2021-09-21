@@ -6,8 +6,6 @@
     <h1>Crear Nuevo Artículo</h1>
 @stop
 
-
-
 @section('content')
     <form action="/articulos" method="POST" enctype="multipart/form-data">
         @csrf
@@ -32,14 +30,6 @@
             <label for="" class="form-label">Cantidad</label>
             <input id="acantidad" name="acantidad" type="text" class="form-control" tabindex="1">
         </div>
-        <div>
-            <label for="" class="form-label">Estado</label>
-            <select name="aestado" id="aestado" class="form-control">
-                <option value="" disabled selected>Seleccione un Estado</option>
-                <option value="Activo">Activo</option>
-                <option value="No Activo">No Activo</option>
-            </select>
-        </div>
         <div clas="mb-3">
             <label for="" class="form-label">Número de orden de compra</label>
             <input id="aorden" name="aorden" type="text" class="form-control" tabindex="1">
@@ -51,7 +41,6 @@
                 <option value="Boleta">Boleta</option>
                 <option value="Factura">Factura</option>
             </select>
-            
         </div>
         
         <style>
@@ -66,7 +55,7 @@
         </div>
         <div id="Ocultar" clas="mb-3">
             <label for="" class="form-label">Nombre de proveedor</label>
-            <input id="aproveedor" name="aproveedor" type="text" class="form-control" tabindex="1">
+            <input id="aproveedor" name="aproveedor" type="text" class="form-control" tabindex="1" value="---">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Precio</label>

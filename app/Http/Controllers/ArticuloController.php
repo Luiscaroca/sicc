@@ -39,7 +39,6 @@ class ArticuloController extends Controller
     {
         $inventarios = Inventario::all();
         return view('articulo.create')->with('inventarios',$inventarios);
-
     }
 
     /**
@@ -59,7 +58,7 @@ class ArticuloController extends Controller
             'n_serie' => $request->aserie,
             'inventario_id' => $request->inventario_id,
             'cantidad' => $request->acantidad,
-            'estado' => $request->aestado,
+            'estado' => 'Activo',
             'n_orden' => $request->aorden,
             'tipo_documento' => $request->atipodocumento,
             'n_documento' => $request->adocumento,
@@ -123,7 +122,6 @@ class ArticuloController extends Controller
         $articulo->save();
         return redirect('/articulos');;
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -136,4 +134,5 @@ class ArticuloController extends Controller
         $articulo->delete();
         return redirect('/articulos');
     }
+
 }

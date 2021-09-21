@@ -25,6 +25,8 @@ class CreateArticulosTable extends Migration
             $table->string('n_orden');
             $table->string('proveedor');
             $table->string('precio');
+            $table->string('linea_subvencion');
+            $table->string('fecha_ingreso');
             $table->string('file_path');
             $table->foreign('inventario_id')
                 ->references('id')

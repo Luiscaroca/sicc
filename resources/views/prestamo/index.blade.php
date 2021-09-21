@@ -2,14 +2,12 @@
 
 @section('title', 'Préstamos Activos')
 
+@section('content_header')
+    <h1>Préstamos Activos</h1>
+@stop
+
 @section('content')
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Préstamos Activos</h1>
-        <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#crearModal">
-            <i class="fas fa-user fa-sm text-white-50"></i>
-            Crear Nuevo Préstamo
-        </button>
-    </div>
+    <a href="prestamo/create" class="btn btn-primary mb-3">Crear</a></br>
     <div class="row">
         @if($message= Session::get('Listo'))
             <div class="col-12 alert alert-success alert-dismissible fade show" role="alert">
@@ -25,8 +23,9 @@
                 <tr>
                     <th>ID Préstamo</th>
                     <th>Usuario</th>
+                    <th>Fecha de entrega</th>
                     <th>Comentario</th>
-                    <th>&nbsp</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,126 +56,6 @@
             </tbody>
         </table>
     </div>
-    <!-- Modal Crear-->
-    <div class="modal fade" id="crearModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Crear Préstamo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="/prestamos" method="POST">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="row">
-                            @if($message= Session::get('ErrorInsert'))
-                                <div class="col-12 alert alert-danger alert-dismissable fade show" role="alert">
-                                    <h5>Errores:</h5>
-                                    <ul>
-                                        @foreach($errors->all() as $error)
-                                            <li>{{$error}}</li>
-                                        @endforeach
-                                    </ul>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="form-label">Usuario</label>
-                            <select name="puser_id" id="puser_id" class="form-control">
-                                <option value="" disabled selected>Seleccione al Usuario</option>
-                                @foreach($pusers as $puser)
-                                    <option value="{{$puser->id}}">{{$puser->nombre}}</option>
-                                @endforeach
-                            </select>
-                            <label for="" class="form-label">Comentario</label>
-                            <textarea name="comentario" id="comentario" cols="40" rows="5" class="form-control" placeholder="Comentario" value="{{old('comentario')}}"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="Submit" class="btn btn-primary">Crear Préstamo</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Eliminar-->
-    <div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Préstamo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h5>¿Realmente desea eliminar el Préstamo?</h5>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-danger btnModalEliminar">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Editar-->
-    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Préstamo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="/prestamos/edit" method="POST">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="row">
-                            @if($message= Session::get('ErrorInsert'))
-                                <div class="col-12 alert alert-danger alert-dismissable fade show" role="alert">
-                                    <h5>Errores:</h5>
-                                    <ul>
-                                        @foreach($errors->all() as $error)
-                                            <li>{{$error}}</li>
-                                        @endforeach
-                                    </ul>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            @endif
-                        <input type="hidden" name="id" id="idEdit">
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="form-label">Usuario</label>
-                            <select name="puser_id" id="puser_idedit" class="form-control">
-                                <option value="" disabled selected>Seleccione al Usuario</option>
-                                @foreach($pusers as $puser)
-                                    <option value="{{$puser->id}}">{{$puser->nombre}}</option>
-                                @endforeach
-                            </select>
-                            <label for="" class="form-label">Comentario</label>
-                            <textarea name="comentario" id="comentarioedit" cols="40" rows="5" class="form-control" placeholder="Comentario" value="{{old('comentario')}}"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="Submit" class="btn btn-primary">Editar Préstamo</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
 @stop
 
 @section('css')

@@ -7,9 +7,14 @@
 @stop
 
 @section('content')
-    <a href="articulos/create" class="btn btn-primary mb-3">Crear</a>
+    <a href="articulos/create" class="btn btn-primary mb-3">Crear</a></br>
+    <select id="FiltroActivos" oninput="filterTable()">
+        <option>Todos</option>
+        <option>Activo</option>
+        <option>No Activo</option>
+    </select>
 
-    <table id="articulos" class="table table-striped table-bordered shadow-lg mt-4" style="width: 100%">
+    <table id="articulos" class="table table-striped table-bordered shadow-lg mt-4" style="overflow-x: auto;">
         <thead>
         <tr>
             <th scope="col">ID</th>
@@ -17,6 +22,8 @@
             <th scope="col">Inventario</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Estado</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Proveedor</th>
             <th scope="col">Precio</th>
             <th scope="col">Imagen Referencial</th>
             <th scope="col">Acciones</th>
@@ -30,27 +37,43 @@
                 <td>{{$articulo->art_inven->nombre}}</td>
                 <td>{{$articulo->cantidad}}</td>
                 <td>{{$articulo->estado}}</td>
+                <td>{{$articulo->tipo_documento}}</br>{{$articulo->n_documento}}</td>
+                <td>{{$articulo->proveedor}}</td>
                 <td>{{$articulo->precio}}</td>
                 <td><img src="img/articulos/{{$articulo->file_path}}" width="100px" height="100px" alt="imagen"></td>
                 <td>
-                    <center><form id="form1" action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
+                    <center><form id="form1" method="POST">
                         <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info">Editar</a>
                         <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Préstamo</a>
-                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Devolución</a>
-                        @csrf
                     </form></center>
+                    
+                    <center><form id="form2" action="{{ route ('estado.update',$articulo->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <button type="submit" class="btn btn-info">Cambiar estado</button>
+                    </form></center>
+
+                    <center><form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">    
+                        <a id=form3 {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Devolución</a>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Borrar</button>
+                    </form></center>
+
                     <style>
                         #form1{
                             margin-top: 10px;
                             margin-bottom: 4px;
                         }
-                    </style>
 
-                    <center><form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
-                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Dar de Baja</a>
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Borrar</button>
-                    </form></center>
+                        #form2{
+                            margin-bottom: 4px;
+                        }
+
+                        #form3{
+                            margin-bottom: 4px;
+                        }
+                    </style>
 
                 </td>
             </tr>
@@ -70,6 +93,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        function filterTable() {
+        
+        let dropdown, table, rows, cells, estado, filter;
+        dropdown = document.getElementById("FiltroActivos");
+        table = document.getElementById("articulos");
+        rows = table.getElementsByTagName("tr");
+        filter = dropdown.value;
+
+        for (let row of rows) { 
+            cells = row.getElementsByTagName("td");
+            estado = cells[4] || null;
+            if (filter === "Todos" || !estado || (filter === estado.textContent)) {
+                row.style.display = "";
+            }
+            else {
+            row.style.display = "none";
+            }
+        }
+    }
+    </script>
     <script>
         $(document).ready(function() {
             $('#articulos').DataTable({

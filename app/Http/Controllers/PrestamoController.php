@@ -29,7 +29,8 @@ class PrestamoController extends Controller
      */
     public function create()
     {
-        //
+        $puser = Puser::all();
+        return view('prestamo.create')->with('puser',$puser);
     }
 
     /**
