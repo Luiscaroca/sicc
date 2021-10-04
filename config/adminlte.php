@@ -307,13 +307,89 @@ return [
         ['header'=>'Administración de Préstamos'],
         [
             'text'=>'Listar Usuarios de Préstamo',
-            'icon'=>'fas fa-user-tag',
+            'icon'=>'fas fa-user',
             'url'=>'/pusers',
         ],
         [
             'text'=>'Listar Préstamos Activos',
             'icon'=>'fas fa-file-invoice',
             'url'=>'/prestamos',
+        ],
+        ['header'=>'Reportes'],
+        [
+            'text'=>'Generales',
+            'icon'=>'fas fa-cog',
+            'submenu'=>[
+                [
+                    'text'=>'Inventarios',
+                    'icon'=>'fas fa-warehouse',
+                    'url'=>'/reporte_inventarios',
+                ],
+                [
+                    'text'=>'Usuarios',
+                    'icon'=>'fas fa-users',
+                    'url'=>'/reporte_usuarios',
+                ],
+            ],
+        ],
+        [
+            'text'=>'Artículos',
+            'icon'=>'fas fa-boxes',
+            'submenu'=>[
+                [
+                    'text'=>'Todos los Artículos',
+                    'icon'=>'fas fa-box',
+                    'url'=>'/reporte_articulos',
+                ],
+                [
+                    'text'=>'Artículos Vigentes',
+                    'icon'=>'fas fa-box',
+                    'url'=>'/reporte_articulos_vigentes',
+                ],
+                [
+                    'text'=>'Artículos Dados de Baja',
+                    'icon'=>'fas fa-box',
+                    'url'=>'/reporte_articulos_dados_baja',
+                ],
+            ],
+        ],
+        [
+            'text'=>'Préstamos',
+            'icon'=>'fas fa-people-carry',
+            'submenu'=>[
+                [
+                    'text'=>'Todos los Préstamos',
+                    'icon'=>'fas fa-file-invoice',
+                    'url'=>'/reporte_prestamos',
+                ],
+                
+                [
+                    'text'=>'Préstamos Vigentes',
+                    'icon'=>'fas fa-file-invoice',
+                    'url'=>'/reporte_prestamos_vigentes',
+                ],
+                [
+                    'text'=>'Préstamos a Devolución',
+                    'icon'=>'fas fa-file-invoice',
+                    'url'=>'/reporte_prestamos_devolucion',
+                ],
+            ],
+        ],
+        [
+            'text'=>'Documentos',
+            'icon'=>'fas fa-clipboard-check',
+            'submenu'=>[
+                [
+                    'text'=>'Boletas',
+                    'icon'=>'fas fa-file-alt',
+                    'url'=>'/reporte_boleta',
+                ],
+                [
+                    'text'=>'Facturas',
+                    'icon'=>'fas fa-file-alt',
+                    'url'=>'/reporte_factura',
+                ],
+            ],
         ],
     ],
 

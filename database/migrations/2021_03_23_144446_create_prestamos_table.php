@@ -18,6 +18,7 @@ class CreatePrestamosTable extends Migration
             $table->bigInteger('puser_id')->unsigned();
             $table->string('comentario');
             $table->date('fechaentrega');
+            $table->string('estado');
             $table->foreign('puser_id')
                 ->references('id')
                 ->on('pusers')

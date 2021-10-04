@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <a href="prestamo/create" class="btn btn-primary mb-3">Crear</a></br>
+    <a href="prestamos/create" class="btn btn-primary mb-3">Crear</a></br>
     <div class="row">
         @if($message= Session::get('Listo'))
             <div class="col-12 alert alert-success alert-dismissible fade show" role="alert">
