@@ -33,18 +33,10 @@
                     <tr>
                         <td>{{$prestamo->id}}</td>
                         <td>{{$prestamo->nombre}}{{ $prestamo->puser->nombre }}</td>
+                        <td>{{$prestamo->fechaentrega}}</td>
                         <td>{{$prestamo->comentario}}</td>
                         <td>
-                            <button class="btn btn-round btnEliminar" data-id="{{$prestamo->id}}" data-toggle="modal" data-target="#eliminarModal"><i class="fa fa-trash"></i> </button>
-                            <button class="btn btn-round btnEditar"
-                                    data-id="{{$prestamo->id}}"
-                                    data-nombre="{{$prestamo->puser_id}}"
-                                    data-comentario="{{$prestamo->comentario}}"
-                                    data-toggle="modal" data-target="#editarModal">
-                                <i class="fa fa-edit"></i> </button>
-                            <a class="btn btn-round" href="detalleprestamos/create"><i class="far fa-plus-square"></i></a>
-
-                            <a class="btn btn-round" href="detalleprestamos"><i class="fas fa-clipboard-list"></i></a>
+                            <a href="detalleprestamos/create" class="btn btn-info">Añadir productos</a>
                             <form action="{{url('prestamos',['id'=>$prestamo->id])}}" method="post" id="formEli_{{$prestamo->id}}">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$prestamo->id}}">
@@ -67,23 +59,4 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script>
-        var idEliminar=0;
-        $(document).ready(function(){
-            @if($message = Session::get('ErrorInsert'))
-                $("#crearModal").modal('show');
-            @endif
-            $(".btnEliminar").click(function (){
-                idEliminar = $(this).data('id');
-            });
-            $(".btnModalEliminar").click(function (){
-                $("#formEli_"+idEliminar).submit();
-            });
-            $(".btnEditar").click(function (){
-                $("#idEdit").val($(this).data('id'));
-                $("#puser_idedit").val($(this).data('puser_id'));
-                $("#comentarioedit").val($(this).data('comentario'));
-            });
-        });
-    </script>
 @stop

@@ -44,9 +44,12 @@
                 <td>
                     <center><form id="form1" method="POST">
                         <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info">Editar</a>
-                        <a {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Préstamo</a>
                     </form></center>
                     
+                    <center><form id="form2" method="POST">
+                        <a href="/prestamos/create" class="btn btn-info">Préstamo</a>
+                    </form></center>
+
                     <center><form id="form2" action="{{ route ('estado.update',$articulo->id) }}" method="POST">
                         @csrf
                         @method('PUT')
@@ -54,7 +57,7 @@
                     </form></center>
 
                     <center><form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">    
-                        <a id=form3 {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Devolución</a>
+                        <!--<a id=form3 {--href="/articulos/{{$articulo->id}}/edit"--} class="btn btn-info">Devolución</a>-->
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Borrar</button>
@@ -70,9 +73,9 @@
                             margin-bottom: 4px;
                         }
 
-                        #form3{
+                        /*#form3{
                             margin-bottom: 4px;
-                        }
+                        }*/
                     </style>
 
                 </td>

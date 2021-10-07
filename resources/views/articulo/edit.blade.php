@@ -4,6 +4,7 @@
 
 @section('content_header')
     <h1>Editar Artículo</h1>
+    <h5>Todos los campos deben ser rellenados</h5>
 @stop
 
 

@@ -52,8 +52,10 @@ class PrestamoController extends Controller
                 ->withErrors($validator);
         }else{
             $prestamo = Prestamo::create([
-                'puser_id'=>$request->puser_id,
-                'comentario'=>$request->comentario
+                'puser_id' => $request->apuser,
+                'comentario' => $request->acomentario,
+                'fechaentrega' => $request->afecha,
+                'estado' => 'Activo'
             ]);
             return back()->with('Listo','Prestamo creado correctamente, favor agregar articulos.');
         }
